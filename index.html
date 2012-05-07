@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What time is it?</title>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/typeface.js"></script>
+	
+	<script>
+	$(function(){
+		window.setInterval(function(){  
+		    var d = new Date();
+			$('p').html(x(d.getHours()) + ':' + x(d.getMinutes()) + ':' + x(d.getSeconds()));
+		}, 100);
+		
+		function x(t){
+			t < 10 ? t = '0' + t.toString() : t;		
+			return t;
+		}
+	});
+	</script>
+</head>
+<body style="font-size: 100pt; font-family: WWDigital;">
+	<div style="width: 550px; margin: 0px auto; border: 0px solid;"><p></p></div>
+</body>
+</html>
